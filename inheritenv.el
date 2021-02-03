@@ -63,7 +63,6 @@ ARGS is as for ORIG."
     (apply func args)))
 
 
-;;;###autoload
 (defmacro inheritenv (&rest body)
   "Wrap BODY so that the environment it sees will match the current value.
 This is useful if BODY creates a temp buffer, because that will
@@ -72,7 +71,6 @@ not inherit any buffer-local values of variables `exec-path' and
   `(inheritenv-apply (lambda () ,@body)))
 
 
-;;;###autoload
 (defmacro inheritenv-add-advice (func)
   "Advise function FUNC with `inheritenv-apply'.
 This will ensure that any buffers (including temporary buffers)
