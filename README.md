@@ -6,7 +6,7 @@
 # Make Emacs temp buffers inherit buffer-local environment variables
 
 Environment variables in Emacs can be set buffer-locally, like many
-Emacs preferences, which allows users to have different buffer-local
+Emacs preferences, and this allows users to have different buffer-local
 paths for executables in different projects, specified by a
 `.dir-locals.el` file or via a `direnv` integration like
 [envrc](https://github.com/purcell/envrc).
@@ -14,7 +14,8 @@ paths for executables in different projects, specified by a
 However, there's a fairly common pitfall when Emacs libraries run
 background processes on behalf of a user: many such libraries run
 processes in temporary buffers that do not inherit the calling
-buffer's environment. This can result in executables not being found,
+buffer's environment if it is set buffer-locally.
+This can result in executables not being found,
 or the wrong versions of executables being picked up.
 
 An example is the Emacs built-in command
