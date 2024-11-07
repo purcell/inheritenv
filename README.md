@@ -63,5 +63,3 @@ Homepage: https://github.com/purcell/inheritenv
 [💼 LinkedIn profile](https://uk.linkedin.com/in/stevepurcell)
 
 [✍ sanityinc.com](https://www.sanityinc.com/)
-
-[🐦 @sanityinc](https://twitter.com/sanityinc)
