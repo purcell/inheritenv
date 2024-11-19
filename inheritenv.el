@@ -64,7 +64,9 @@ This function is designed for convenient use as an \"around\" advice.
 
 ARGS is as for ORIG."
   (cl-letf* (((default-value 'process-environment) process-environment)
-             ((default-value 'exec-path) exec-path))
+             ((default-value 'exec-path) exec-path)
+             ((default-value 'tramp-remote-process-environment) tramp-remote-process-environment)
+             ((default-value 'tramp-remote-path) tramp-remote-path))
     (apply func args)))
 
 
